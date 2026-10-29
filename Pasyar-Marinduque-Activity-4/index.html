@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f6f2e9">
+    <meta name="description" content="A demonstration guide to heritage, culture, and coastal experiences in Marinduque.">
+    <title>Pasyar Marinduque | Heritage & Island Guide</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Pasyar Marinduque home">
+        <span class="brand-mark" aria-hidden="true">P</span>
+        <span>Pasyar <span class="brand-light">Marinduque</span></span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="#discover">Discover</a>
+        <a href="#visit-plan">My visit plan</a>
+        <a href="#travel-kindly">Travel kindly</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-dot"></span> A small island, many stories</p>
+          <h1 id="hero-title">Find your own way<br>around <span>Marinduque.</span></h1>
+          <p class="hero-description">A thoughtful starting point for heritage walks, cultural traditions, and time by the sea.</p>
+          <a class="button button-dark" href="#discover">Explore the guide <span aria-hidden="true">↘</span></a>
+          <p class="demo-note">A demonstration guide. Please verify current details locally.</p>
+        </div>
+        <div class="hero-art" aria-label="Illustration of an island landscape">
+          <div class="sun" aria-hidden="true"></div>
+          <div class="island island-back" aria-hidden="true"></div>
+          <div class="island island-front" aria-hidden="true"></div>
+          <div class="wave wave-one" aria-hidden="true"></div>
+          <div class="wave wave-two" aria-hidden="true"></div>
+          <span class="art-caption">MIMAROPA · PHILIPPINES</span>
+        </div>
+      </section>
+
+      <section class="section discover-section" id="discover" aria-labelledby="discover-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Take the scenic route</p>
+            <h2 id="discover-title">Places with a story</h2>
+          </div>
+          <p class="section-intro">Browse a few example stops. Use the filters to find a starting point, then add places to your visit plan.</p>
+        </div>
+
+        <form class="filters" id="search-form" role="search">
+          <div class="search-field">
+            <label for="place-search">Search experiences</label>
+            <input id="place-search" name="q" type="search" placeholder="Try “Boac” or “coast”" autocomplete="off">
+          </div>
+          <div class="category-field">
+            <label for="category-filter">Experience type</label>
+            <select id="category-filter" name="category">
+              <option value="all">All experiences</option>
+              <option value="heritage">Heritage</option>
+              <option value="culture">Culture</option>
+              <option value="coast">Coast & nature</option>
+            </select>
+          </div>
+          <button class="button button-outline filter-reset" type="reset">Clear filters</button>
+        </form>
+
+        <p class="results-count" id="results-count" aria-live="polite">Showing 4 example experiences</p>
+        <div class="place-grid" id="place-grid">
+          <article class="place-card" data-place="boac-heritage" data-category="heritage" data-search="boac heritage district historic streets boac">
+            <div class="place-art art-heritage" aria-hidden="true"><span>01</span><b>OLD TOWN<br>STORIES</b></div>
+            <div class="place-content">
+              <p class="card-category">HERITAGE <span>· BOAC</span></p>
+              <h3>Boac Heritage District</h3>
+              <p>Take a slow walk through the provincial capital and notice the character of its historic streets.</p>
+              <button class="text-button add-place" type="button">Add to my plan <span aria-hidden="true">+</span></button>
+            </div>
+          </article>
+
+          <article class="place-card" data-place="boac-cathedral" data-category="heritage" data-search="boac cathedral immaculate conception church heritage boac">
+            <div class="place-art art-cathedral" aria-hidden="true"><span>02</span><b>A PLACE<br>TO PAUSE</b></div>
+            <div class="place-content">
+              <p class="card-category">HERITAGE <span>· BOAC</span></p>
+              <h3>Boac Cathedral</h3>
+              <p>Visit the Immaculate Conception Cathedral as a place of worship and part of the town's heritage.</p>
+              <button class="text-button add-place" type="button">Add to my plan <span aria-hidden="true">+</span></button>
+            </div>
+          </article>
+
+          <article class="place-card" data-place="moriones" data-category="culture" data-search="moriones festival holy week mask tradition culture marinduque">
+            <div class="place-art art-culture" aria-hidden="true"><span>03</span><b>TRADITION<br>IN COLOR</b></div>
+            <div class="place-content">
+              <p class="card-category">CULTURE <span>· MARINDUQUE</span></p>
+              <h3>Moriones Festival</h3>
+              <p>Learn about the island's Holy Week tradition featuring morion masks. Programs and dates vary.</p>
+              <button class="text-button add-place" type="button">Add to my plan <span aria-hidden="true">+</span></button>
+            </div>
+          </article>
+
+          <article class="place-card" data-place="poctoy" data-category="coast" data-search="poctoy white beach torrijos coast sea">
+            <div class="place-art art-poctoy" aria-hidden="true"><span>04</span><b>SEA AIR<br>& SLOW DAYS</b></div>
+            <div class="place-content">
+              <p class="card-category">COAST & NATURE <span>· TORRIJOS</span></p>
+              <h3>Poctoy White Beach</h3>
+              <p>Make room for a coastal pause in Torrijos. Check local conditions and access before setting out.</p>
+              <button class="text-button add-place" type="button">Add to my plan <span aria-hidden="true">+</span></button>
+            </div>
+          </article>
+        </div>
+        <p class="empty-results" id="empty-results" hidden>No experiences match those filters. Try another search.</p>
+      </section>
+
+      <section class="visit-section" id="visit-plan" aria-labelledby="plan-title">
+        <div class="visit-copy">
+          <p class="eyebrow">Your island, your pace</p>
+          <h2 id="plan-title">Make a little<br>room for wonder.</h2>
+          <p>Collect the places you want to explore. This simple plan stays on this page and does not book or reserve anything.</p>
+          <p class="plan-count" id="plan-count" aria-live="polite">0 places in your plan</p>
+          <button class="button button-light" id="clear-plan" type="button" disabled>Clear my plan</button>
+        </div>
+        <div class="plan-panel">
+          <div class="plan-panel-heading">
+            <span class="plan-icon" aria-hidden="true">✳</span>
+            <div><p class="card-category">A FLEXIBLE START</p><h3>Your visit plan</h3></div>
+          </div>
+          <ul class="plan-list" id="plan-list" aria-label="Places in your visit plan">
+            <li class="plan-empty" id="plan-empty">Your plan is open. Add a place from the guide to begin.</li>
+          </ul>
+          <p class="plan-footnote">No routes or travel times are estimated here. Confirm transportation and opening details with local providers.</p>
+        </div>
+      </section>
+
+      <section class="kindly-section" id="travel-kindly" aria-labelledby="kindly-title">
+        <div class="kindly-mark" aria-hidden="true">✳</div>
+        <div>
+          <p class="eyebrow">A note before you go</p>
+          <h2 id="kindly-title">Travel with care.</h2>
+          <p>Respect places of worship and community spaces, ask before photographing people, follow local guidance, and leave natural places as you found them. This guide is a starting point—not a substitute for current local information.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <a class="brand footer-brand" href="#top"><span class="brand-mark" aria-hidden="true">P</span><span>Pasyar <span class="brand-light">Marinduque</span></span></a>
+      <p>Made as a student demonstration · Tourism & Cultural Innovation</p>
+      <a href="#top">Back to top ↑</a>
+    </footer>
+  </body>
+</html>
